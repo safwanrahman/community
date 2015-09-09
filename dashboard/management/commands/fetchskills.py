@@ -35,4 +35,14 @@ class Command(NoArgsCommand):
         for country in COUNTRIES:
             print enter_country_data_in_userskill(country)
 
-        print "Done all"
+        print "Done fetching all data"
+        print "Deleting unnecessary data............................."
+        # Delete the User skill data which does not have any specific country. Out of the country range
+        # of the dashboard
+        UserSkill.objects.all().filter(country='').delete()
+        # Delete all the username from the user skill table. As we dont need the username anymore
+        UserSkill.objects.all().update(username='')
+        # Delete all the user URL data as its not needed for the dashboard
+        UserInfo.objects.all().update(url='')
+        print "Done deleting all the un necessary data"
+        print "Finish all"
