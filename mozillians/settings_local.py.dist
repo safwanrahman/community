@@ -1,0 +1,30 @@
+from mozillians.settings import *
+
+# This is the locale settings. Change here to overwrite the value of the settings
+
+# The API Key for calling mozillians API.
+# For getting API key, check http://mozillians.readthedocs.org/en/latest/api/apiv2
+API_KEY = ''
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+# If make DEBUG = False, then change the ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
+
+# Database
+# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+# Sqlite is used for general purpose. Can use any SQL Database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.8/howto/static-files/
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')

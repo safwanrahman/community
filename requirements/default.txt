@@ -1,0 +1,5 @@
+# sha256: I3bD2MX0lbMCsRLXIyyEdhEwxDDhhAwFoqArKPF91ZY
+Django==1.8.4
+
+# sha256: IPl2zc4CpCtpzoDp4DiXpRgUs21EizcohUYIbrxHMUY
+requests==2.7.0

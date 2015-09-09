@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Community Dashboard </title>
+  </head>
+
+  <body>
+    <p>
+     <table border="1px" align="center">
+       <tr>
+         <th>Country</th>
+         <th>Total Mozillians</th>
+         <th>Avarage Mozillians Years</th>
+       </tr>
+       {% for info in data %}
+          <tr>
+            <td>{{info.country}}</td>
+            <td>{{info.total_mozillians}}</td>
+            <td>{{info.avg_contrib_years}}</td>
+          </tr>
+        {% endfor %}
+     </table>
+    </p>
+
+    <p>
+      <table border="1px" align="center">
+        <tr>
+          <th>Country</th>
+          <th>Skill-1</th>
+          <th>Skill-2</th>
+          <th>Skill-3</th>
+          <th>Skill-4</th>
+          <th>Skill-5</th>
+        </tr>
+        {% for info in data %}
+          <tr>
+            <td>{{ info.country }}</td>
+            {% for skill in info.top_skills %}
+              <td align="center">{{ skill.0 }} ({{skill.1}})</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </table>
+    </p>
+  </body>
+</html>

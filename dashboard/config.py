@@ -1,0 +1,10 @@
+COUNTRIES = ['India',
+             'Indonesia',
+             'Bangladesh',
+             'Philippines',
+             'Germany',
+             'France',
+             'United Kingdom',
+             'United States',
+             'Mexico',
+             'Brazil']
